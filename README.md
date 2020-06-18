@@ -42,8 +42,19 @@ This project follows the continuation of the project [Blood vessel segmentation 
 ![Sem Título](https://user-images.githubusercontent.com/66881028/85034786-577a9800-b17a-11ea-8d31-043a9d655b25.png)
 
 | Image | Normalization | Kernel | Accuracy (%) | AUC (%) |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
 | a) | Global | Linear | 91,85 | 94,58 | 
 | b) | Global | RBF | 92,38 | 81,27 |
 | c) | Individual | Linear | 92,97 | 94,56 | 
 | d) | Individual | RBF | 93,49 | 81,48
+
+* Best results for each test (random points; pots and background; thin pots, thick pots and background) and comparison between them.
+
+![ddddd](https://user-images.githubusercontent.com/66881028/85035717-66157f00-b17b-11ea-8d0d-ce004b43d752.png)
+
+| Image | SVM method | Accuracy (%) | AUC (%) |
+| ------------- | ------------- | ------------- | ------------- |
+| a) | Random points | 92,97 | 94,56 | 
+| b) | 20% vases and 80% background | 94,09 | 94,68 | 
+| c) | 10% fine vases, 15% thick vases and 75% background | 94,02 | 94,74 | 
+| d) | Manual segmentation | 100,00 | 100,00
