@@ -2,12 +2,12 @@
 
 **PROJECT:** 
 
-This project follows the continuation of the project [Blood vessel segmentation using line operators](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators), where the objective is to automatically segment blood vessels in images fundus, using the support vector machine (SVM) which uses vectors to build its final classifier. Here, the number of points extracted at random, the type of normalization (global and individual), the type of classified (linear and rbf) and the percentage of points extracted belonging to thin vessels, thick vessels and background were varied.
+This project follows the continuation of the project [Blood vessel segmentation using line operators](https://github.com/MiguelCastro3/Blood-vessel-segmentation-using-line-operators), where the objective is to automatically segment blood vessels in images fundus, using the support vector machine (SVM) which uses vectors to build its final kernel. Here, the number of points extracted at random, the type of normalization (global and individual), the type of classified (linear and rbf) and the percentage of points extracted belonging to thin vessels, thick vessels and background were varied.
 
 **STEPS:** 
 
 * Extraction of features and labels for random points, for vases and background and for thin vases, thick vases and background;
-* Application of the classifier and respective segmentation of blood vessels;
+* Application of the kernel and respective segmentation of blood vessels;
 * Variation of some variables in order to analyze how they may affect the final results.
 
 **FILES:** 
@@ -23,15 +23,27 @@ This project follows the continuation of the project [Blood vessel segmentation 
 
 **RESULTS:** 
 
-An example of the results obtained:
-![Sem Título](https://user-images.githubusercontent.com/66881028/84937268-60fcf500-b0d3-11ea-87ee-9b9821fea0f4.png)
-| Image/Metrics  | Sensitivity | Specificity | Accuracy |
-| ------------- | ------------- | ------------- | ------------- |
-| 40_training  | 64.45877847208224 | 98.62850631314416	| 94.79986809950357 |  
+* Different segmentations obtained by varying the number of random points extracted.
 
+![1](https://user-images.githubusercontent.com/66881028/85033918-64e35280-b179-11ea-99c6-cdd7171f31fe.png)
 
-Effects obtained with the variation of the threshold and the line length:
+| Number of points  | Accuracy (%) | AUC (%) |
+| ------------- | ------------- | ------------- |
+| 1000 | 94,13 | 83,12 | 
+| 2000 | 94,24 | 83,19 | 
+| 3000 | 94,32 | 84,14 | 
+| 4000 | 94,34 | 83,45 | 
+| 5000 | 94,41 | 83,40 | 
+| 7500 | 94,43 | 83,50 | 
+| 10000 | 94,42 | 82,82 | 
 
-![threshold](https://user-images.githubusercontent.com/66881028/84935216-4b3a0080-b0d0-11ea-9913-875057e28af9.png)
+* Different segmentations obtained by varying the number of random points extracted.
 
-![comprimento de linha](https://user-images.githubusercontent.com/66881028/84935213-4aa16a00-b0d0-11ea-8271-99ad3d4d77bf.png)
+![Sem Título](https://user-images.githubusercontent.com/66881028/85034786-577a9800-b17a-11ea-8d31-043a9d655b25.png)
+
+| Image | Normalization | Kernel | Accuracy (%) | AUC (%) |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| a) | Global | Linear | 91,85 | 94,58 | 
+| b) | Global | RBF | 92,38 | 81,27 |
+| c) | Individual | Linear | 92,97 | 94,56 | 
+| d) | Individual | RBF | 93,49 | 81,48
